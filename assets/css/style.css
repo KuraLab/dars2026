@@ -28,10 +28,10 @@ a:hover{text-decoration:underline}
 .menu-toggle{display:none;background:transparent;border:0;cursor:pointer}
 .menu-bar{display:block;width:22px;height:2px;background:var(--text);margin:4px 0;border-radius:2px}
 
-.hero{padding:5rem 0 3rem;background:linear-gradient(135deg, #f0f4f8 0%, #e6edf5 100%);border-bottom:1px solid #d1dae6}
-.headline{font-size:clamp(2rem,6vw,3.2rem);margin:.25rem 0}
-.subhead{color:var(--muted);margin:0 0 .5rem 0}
-.details{color:var(--muted)}
+.hero{padding:6rem 0 5.5rem;min-height:70vh;background:linear-gradient(rgba(10,18,32,.55),rgba(10,18,32,.55)),url("../img/2FHD_techfrontfront.jpg") center 62%/cover no-repeat;border-bottom:1px solid #d1dae6;color:#ffffff}
+.headline{font-size:clamp(2.6rem,8vw,4.4rem);margin:.25rem 0;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.subhead{font-size:clamp(1.1rem,2.2vw,1.35rem);color:rgba(255,255,255,.92);margin:0 0 .5rem 0}
+.details{font-size:clamp(1rem,1.8vw,1.15rem);color:rgba(255,255,255,.92)}
 .cta-group{display:flex;gap:.75rem;margin-top:1rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border-radius:.7rem;border:1px solid #c5cdd8;background:var(--surface);color:var(--text);text-decoration:none}
 .btn.primary{border-color:transparent;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#ffffff;font-weight:700}
