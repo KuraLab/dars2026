@@ -6,6 +6,61 @@
   <title>DARS 2026 – Distributed Autonomous Robotic Systems 2026</title>
   <meta name="description" content="The International Symposium on Distributed Autonomous Robotic Systems (DARS) 2026">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .person-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .person-card {
+      width: 100%;
+      max-width: none;
+    }
+
+    .person-card .avatar {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+    }
+
+    .item-label {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-weight: 700;
+    }
+
+    .item-text {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+    }
+
+    .talk-title-line {
+      margin-bottom: 0;
+    }
+
+    .abstract-line {
+      margin-top: 0;
+    }
+
+    .person-card h3 {
+      font-size: 1.35rem;
+    }
+
+    .container.prose > h1 {
+      font-size: clamp(2rem, 3.4vw, 2.6rem);
+      line-height: 1.15;
+    }
+
+    @media (max-width: 800px) {
+      .person-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -19,7 +74,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="cfp.html">CFP</a></li>
         <li><a href="program.html">Program</a></li>
-        <li><a href="keynotes.html">Keynotes</a></li>
+        <li><a href="keynotes.html">Speakers</a></li>
         <li><a href="awards.html">Awards</a></li>
         <li><a href="venue.html">Venue</a></li>
         <li><a href="registration.html">Registration</a></li>
@@ -33,19 +88,43 @@
 
 <section class="section">
   <div class="container prose">
-    <h1>Keynotes</h1>
+    <h1>Keynote</h1>
     <div class="person-grid">
       <article class="person-card">
-        <div class="avatar placeholder">Photo</div>
-        <h3>TBD</h3>
-        <p>TBD</p>
-        <p class="muted">Talk title TBD</p>
+        <div class="avatar placeholder"></div>
+        <h3>Coming soon!</h3>
+        <p class="talk-title-line"><span class="item-label">Talk Title:</span> <span class="item-text">TBD</span></p>
+        <p class="abstract-line"><span class="item-label">Abstract:</span> <span class="item-text">TBD</span></p>
+        <p><span class="item-label">Biography:</span> <span class="item-text">TBD</span></p>
       </article>
       <article class="person-card">
-        <div class="avatar placeholder">Photo</div>
-        <h3>TBD</h3>
-        <p>TBD</p>
-        <p class="muted">Talk title TBD</p>
+        <div class="avatar placeholder"></div>
+        <h3>Coming soon!</h3>
+        <p class="talk-title-line"><span class="item-label">Talk Title:</span> <span class="item-text">TBD</span></p>
+        <p class="abstract-line"><span class="item-label">Abstract:</span> <span class="item-text">TBD</span></p>
+        <p><span class="item-label">Biography:</span> <span class="item-text">TBD</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    <h1>Perspective</h1>
+    <div class="person-grid">
+      <article class="person-card">
+        <img class="avatar" src="assets/img/speaker/Gennaro_Notomista.png" alt="Gennaro Notomista photo">
+        <h3>Gennaro Notomista</h3>
+        <p class="talk-title-line"><span class="item-label">Talk Title:</span> <span class="item-text">TBD</span></p>
+        <p class="abstract-line"><span class="item-label">Abstract:</span> <span class="item-text">TBD</span></p>
+        <p><span class="item-label">Biography:</span> <span class="item-text">Gennaro Notomista is an Assistant Professor and the Varma Family Professor in Robotics in the Department of Electrical and Computer Engineering at the University of Waterloo (Waterloo, ON, Canada). Prior to joining University of Waterloo, he was a post-doctoral researcher at the CNRS/Inria/IRISA, Rennes, France. He received the Ph.D. degree in robotics from the Georgia Institute of Technology (Atlanta, GA, USA) in 2020. Dr. Notomista is a Fulbright Scholar and was the recipient of the Alumni Small Grant (2020) and the IEEE ARSO Best Paper Award (2022). His main research interests lie at the intersection of design and control of robotic systems for long-duration autonomy with applications to environmental monitoring.</span></p>
+      </article>
+      <article class="person-card">
+        <div class="avatar placeholder"></div>
+        <h3>Coming soon!</h3>
+        <p class="talk-title-line"><span class="item-label">Talk Title:</span> <span class="item-text">TBD</span></p>
+        <p class="abstract-line"><span class="item-label">Abstract:</span> <span class="item-text">TBD</span></p>
+        <p><span class="item-label">Biography:</span> <span class="item-text">TBD</span></p>
       </article>
     </div>
   </div>
