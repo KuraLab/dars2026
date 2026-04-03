@@ -11,6 +11,55 @@
       font-size: 5rem;
       line-height: 1.1;
     }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 320px);
+      gap: 1rem;
+      align-items: center;
+      justify-content: start;
+      margin-left: 1.5rem;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 320px;
+      min-height: 170px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.1rem;
+      background: #fff;
+    }
+
+    .logo img {
+      max-width: 100%;
+      max-height: 130px;
+      object-fit: contain;
+    }
+
+    .logo-pair {
+      gap: 0.75rem;
+      justify-content: space-evenly;
+    }
+
+    .logo-pair img {
+      max-width: 48%;
+    }
+
+    .section-heading-large {
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      line-height: 1.2;
+    }
+
+    .cooperation-heading {
+      margin: 0.25rem 0 0.75rem 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
   </style>
 </head>
 <body>
@@ -63,7 +112,7 @@
     </aside>
     <div>
   <p style="color: red;">Due to many requests, we are happy to announce that the paper submission deadline for DARS 2026 has been extended!</p>
-  <h2>About DARS 2026</h2>
+  <h2 class="section-heading-large">About DARS 2026</h2>
   <p><i>DARS2026</i> is a single-track meeting for scientific advances in the theory and practice of distributed autonomous robotic systems. It is soliciting significant, original, and previously unpublished presentations.</p>
   
         <p>
@@ -120,27 +169,33 @@
 
 <section class="section alt">
   <div class="container">
-    <h2>Organizers</h2>
+    <h2 class="section-heading-large">Organizers</h2>
     <p><strong>General Chair:</strong> Daisuke Kurabayashi (Institute of Science Tokyo)</p>
     <p><strong>Program Chair:</strong> Takeshi Hatanaka (Institute of Science Tokyo)</p>
-    <p><strong>Advisor:</strong> Hajime Asama (The University of Tokyo)</p>
+    <p><strong>Advisors:</strong> Alcherio Martinoli (EPFL), Hajime Asama (The University of Tokyo)</p>
     <p><a href="organizers.html">See full organizing committee</a></p>
   </div>
 </section>
 
-<!--
+
 <section class="section alt">
   <div class="container">
-    <h2>Sponsors</h2>
-    <p>スポンサー募集予定。ご関心のある企業・団体の方は<a href="organizers.html">Organizers</a>までご連絡ください。</p>
+    <h2 class="section-heading-large">Sponsors</h2>
+    <h3 class="cooperation-heading">In cooperation with</h3>
+    <p></p>
     <div class="logo-grid">
-      <div class="logo placeholder">Your Logo</div>
-      <div class="logo placeholder">Your Logo</div>
-      <div class="logo placeholder">Your Logo</div>
+      <div class="logo logo-pair">
+        <img src="assets/img/logo/SICE.png" alt="SICE logo">
+        <img src="assets/img/logo/SICE_SI.jpg" alt="SICE SI logo">
+      </div>
+      <div class="logo logo-pair">
+        <img src="assets/img/logo/JSME.jpg" alt="JSME logo">
+        <img src="assets/img/logo/robomech.png" alt="robomech logo">
+      </div>
     </div>
   </div>
 </section>
--->
+
 
 </main>
 <footer class="site-footer">
