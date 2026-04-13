@@ -69,6 +69,28 @@
       padding-top: 1rem !important;
     }
 
+    @media (min-width: 900px) {
+      .key-dates-section .card {
+        margin-top: 0.8rem;
+      }
+    }
+
+    /* Timeline row width control */
+    .timeline li span {
+      flex: 0 0 55%;   /* ← 左ラベル列の幅（% で調整） */
+      max-width: 55%;
+    }
+
+    .timeline time {
+      flex: 1 1 auto;
+      text-align: right;
+    }
+
+    /* Key dates section: container width override */
+    .key-dates-section .container {
+      max-width: 1100px;
+    }
+
   </style>
 </head>
 <body>
@@ -107,24 +129,28 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section key-dates-section">
   <div class="container two-col">
     <aside class="card">
       <h3>Key dates</h3>
       <ul class="timeline">
         <!-- <li><span>Paper submission opens</span><time>TBD</time></li> -->
-        <li><span>Paper submission due</span><time><span style="color: red;"><strong>April 24th</strong></span> <strike>March 20th</strike>, 2026</time></li>
-        <li><span>Notification</span><time>July 1st, 2026</time></li>
-        <li><span>Camera-ready</span><time>August 1st, 2026</time></li>
-        <li><span>Symposium</span><time>October 26th-29th, 2026</time></li>
+        <li><span>Paper submission due</span><time><span style="color: red;"><strong>April 24</strong></span> <strike>March 20</strike>, 2026</time></li>
+        <li><span>Notification</span><time>July 1, 2026</time></li>
+        <li><span>Camera-ready</span><time>August 1, 2026</time></li>
+        <li><span>Abstract submission due</span><time><span style="color: red;"><strong>August 1</strong></span>, 2026</time></li>
+        <li><span>Notification (Late Breaking Results & Demo)</span><time>August 15, 2026</time></li>
+        <li><span>Symposium</span><time>October 26-29, 2026</time></li>
       </ul>
     </aside>
-    <div>
-  <p style="color: red;">Due to many requests, we are happy to announce that the paper submission deadline for DARS 2026 has been extended!</p>
-  <h2 class="section-heading-large">About DARS 2026</h2>
-  <p><i>DARS2026</i> is a single-track meeting for scientific advances in the theory and practice of distributed autonomous robotic systems. It is soliciting significant, original, and previously unpublished presentations.</p>
   
-        <p>
+  <div class="about-dars-content">
+    <p style="font-size: 1.35rem; line-height: 1.45;"><span style="color: red;"><strong><i>New</i>: Abstract submissions are now open for Late Breaking Results and Demo Sessions!</strong></span></p>
+
+    <h2 class="section-heading-large">About DARS 2026</h2>
+    <p><i>DARS2026</i> is a single-track meeting for scientific advances in the theory and practice of distributed autonomous robotic systems. It is soliciting significant, original, and previously unpublished presentations.</p>
+  
+      <p>
         The <i>International Symposium on Distributed Autonomous Robotic Systems
         (DARS) </i> has been held biennially since its inception in 1992, maintaining its
         distinctive single-track format that fosters in-depth discussion and collaboration
