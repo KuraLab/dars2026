@@ -5,6 +5,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DARS 2026 – Program</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Section Headers */
+    .program-section-title {
+      font-size: 1.4rem;
+      color: #0f172a;
+      border-bottom: 2px solid #1e40af;
+      padding-bottom: 0.2rem;
+      margin: 2rem 0 0.85rem 0;
+      font-weight: 700;
+    }
+
+    /* Time Block in Overview */
+    .time-block {
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+    .time-block:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .time-label {
+      font-weight: 700;
+      color: #1e3a8a;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 2px;
+      background: #e0f2fe;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+    .time-label.break {
+      color: #475569;
+      background: #f1f5f9;
+    }
+
+    /* Scroll Links in Overview Table */
+    .scroll-link {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #bfdbfe;
+      text-underline-offset: 2px;
+      transition: all 0.2s;
+      display: inline-block;
+      line-height: 1.3;
+    }
+    .scroll-link:hover {
+      color: #1e3a8a;
+      background-color: #eff6ff;
+      border-radius: 2px;
+    }
+
+    /* LB Session Links */
+    .scroll-link.lb-link {
+      color: #059669;
+      text-decoration-color: #a7f3d0;
+    }
+    .scroll-link.lb-link:hover {
+      color: #047857;
+      background-color: #ecfdf5;
+    }
+    
+    /* Detailed Schedule Cards */
+    .session-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #2563eb;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+      scroll-margin-top: 80px;
+    }
+    .session-card.lb-card {
+      border-left-color: #059669;
+    }
+    .session-title {
+      margin-top: 0;
+      color: #0f172a;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.25;
+    }
+    .session-title .session-id {
+      color: #2563eb;
+      margin-right: 6px;
+    }
+    .session-card.lb-card .session-id {
+      color: #059669;
+    }
+    .session-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #047857;
+      display: block;
+      margin-top: 1px;
+    }
+    
+    .session-time-badge {
+      background: #e0f2fe;
+      color: #1e3a8a;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 1px 7px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .session-card.lb-card .session-time-badge {
+      background: #d1fae5;
+      color: #047857;
+    }
+
+    /* Paper List items */
+    .paper-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 0.5rem;
+    }
+    .paper-item {
+      margin-bottom: 0.45rem;
+      padding-left: 0.8rem;
+      position: relative;
+    }
+    .paper-item::before {
+      content: "•";
+      color: #94a3b8;
+      position: absolute;
+      left: 0;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+    .paper-item:last-child {
+      margin-bottom: 0;
+    }
+    .paper-title {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.92rem;
+      display: block;
+      line-height: 1.25;
+      margin-bottom: 0px;
+    }
+    .paper-meta {
+      color: #475569;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -17,7 +170,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="cfp.html">CFP</a></li>
-        <li><a href="program.html">Program</a></li>
+        <li><a href="program.html" class="active">Program</a></li>
         <li><a href="keynotes.html">Speakers</a></li>
         <li><a href="awards.html">Awards</a></li>
         <li><a href="venue.html">Venue</a></li>
@@ -28,114 +181,525 @@
     </nav>
   </div>
 </header>
+
 <main id="main-content" class="site-main">
-<section class="section">
+<section class="section" style="padding: 2rem 0;">
   <div class="container">
     <h1>Program</h1>
-    <p style="font-size: 1.05rem; line-height: 1.6; color: #475569; margin-bottom: 1.25rem;">
-  Below is an overview of the conference program. Detailed schedules and session information will be announced soon.
-</p>
-    <div style="overflow-x: auto; margin: 2rem 0;">
-  <div style="overflow-x: auto; margin: 2rem 0;">
-  <table style="width: 100%; border-collapse: collapse; min-width: 650px; font-family: inherit; font-size: 0.95rem;">
-    <thead>
-      <tr style="background-color: #003366; color: #ffffff; text-align: center;">
-        <th style="padding: 12px; border: 1px solid #cbd5e1; width: 12%;">Time</th>
-        <th style="padding: 12px; border: 1px solid #cbd5e1; width: 22%;">Day 1<br><span style="font-weight: normal; font-size: 0.85rem;">Oct 26 (Mon)</span></th>
-        <th style="padding: 12px; border: 1px solid #cbd5e1; width: 22%;">Day 2<br><span style="font-weight: normal; font-size: 0.85rem;">Oct 27 (Tue)</span></th>
-        <th style="padding: 12px; border: 1px solid #cbd5e1; width: 22%;">Day 3<br><span style="font-weight: normal; font-size: 0.85rem;">Oct 28 (Wed)</span></th>
-        <th style="padding: 12px; border: 1px solid #cbd5e1; width: 22%;">Day 4<br><span style="font-weight: normal; font-size: 0.85rem;">Oct 29 (Thu)</span></th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- AM -->
-      <tr>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; background-color: #f8fafc; font-weight: bold; text-align: center;">AM</td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.5;">
-          Opening<br>
-          Keynote speech<br>
-          Technical sessions
-        </td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.5;">
-          Keynote speech<br>
-          Technical sessions
-        </td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.5;">
-          Perspective talk<br>
-          Technical Sessions
-        </td>
-      </tr>
-      
-      <!-- Lunch -->
-      <tr style="background-color: #e2e8f0;">
-        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: bold; text-align: center; color: #334155;">Lunch</td>
-        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-        <td style="padding: 10px; border: 1px solid #cbd5e1; vertical-align: top; font-style: italic; color: #334155;">
-          (AdCom meeting)
-        </td>
-        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-      </tr>
-
-      <!-- PM -->
-      <tr>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; background-color: #f8fafc; font-weight: bold; text-align: center;">PM</td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.5;">
-          Technical Sessions<br>
-          Late-breaking &amp; Demos
-        </td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.5;">
-          Technical Sessions<br>
-          Late-breaking &amp; Demos<br>
-          Labo-tour
-        </td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.5;">
-          Perspective talk<br>
-          Technical Sessions<br>
-          Award ceremony
-        </td>
-      </tr>
-
-      <!-- Evening -->
-      <tr style="background-color: #fff7ed;">
-        <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; text-align: center; color: #c2410c;">Evening</td>
-        <!-- Welcome Reception -->
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
-          <strong style="color: #c2410c;">Welcome Reception</strong><br>
-          <span style="font-size: 1.0rem; color: #ea580c; display: inline-block; margin-top: 4px;">
-            @ Tsubame Terrace<br>(Ookayama Campus)
-          </span>
-        </td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-        <!-- Banquet -->
-        <td style="padding: 12px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
-          <strong style="color: #c2410c;">Banquet</strong><br>
-          <span style="font-size: 1.0rem; color: #ea580c; display: inline-block; margin-top: 4px;">
-            @ Tokyo Prince Hotel
-          </span>
-        </td>
-        <td style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <!-- 注記（Venue案内を強調） -->
-  <div style="margin-top: 1rem; line-height: 1.6;">
-    <p style="font-size: 1rem; color: #0b15e3; margin: 0 0 0.4rem 0;">
-      * All presentation sessions and award ceremony will be held at <strong>Kuramae Hall, Science Tokyo Front</strong> (excluding social events and Labo-tour).
+    <p style="font-size: 1rem; line-height: 1.5; color: #475569; margin-bottom: 1.5rem;">
+      Below is the conference program. Click on the session links in the overview table to jump to the detailed schedule.
     </p>
-    <p style="font-size: 1rem; color: #0f172a; font-weight: 600; margin: 0;">
-      * Please refer to the <a href="venue.html" style="color: #1437e4; text-decoration: underline; font-weight: bold;">Venue page</a> for detailed maps and access information for each venue.
-    </p>
-  </div>
-  </div>
-</div>
-</div>
+
+    <!-- =====================================
+         Overview Schedule
+    ====================================== -->
+    <div style="overflow-x: auto; margin-bottom: 1rem;">
+      <table style="width: 100%; border-collapse: collapse; min-width: 850px; font-family: inherit; font-size: 0.9rem;">
+        <thead>
+          <tr style="background-color: #003366; color: #ffffff; text-align: left;">
+            <th style="padding: 8px 10px; border: 1px solid #cbd5e1; width: 6%; text-align: center;">Time</th>
+            <th style="padding: 8px 10px; border: 1px solid #cbd5e1; width: 10%; text-align: center;">Day 1<br><span style="font-weight: normal; font-size: 0.8rem;">Oct 26 (Mon)</span></th>
+            <th style="padding: 8px 10px; border: 1px solid #cbd5e1; width: 28%;">Day 2<br><span style="font-weight: normal; font-size: 0.8rem;">Oct 27 (Tue)</span></th>
+            <th style="padding: 8px 10px; border: 1px solid #cbd5e1; width: 28%;">Day 3<br><span style="font-weight: normal; font-size: 0.8rem;">Oct 28 (Wed)</span></th>
+            <th style="padding: 8px 10px; border: 1px solid #cbd5e1; width: 28%;">Day 4<br><span style="font-weight: normal; font-size: 0.8rem;">Oct 29 (Thu)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- AM -->
+          <tr>
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; background-color: #f8fafc; font-weight: bold; text-align: center;">AM</td>
+            
+            <!-- Day 1 AM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8; vertical-align: middle;">—</td>
+            
+            <!-- Day 2 AM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
+              <div class="time-block">
+                <span class="time-label">09:30–09:45</span><br>
+                <strong>Opening</strong>
+              </div>
+              <div class="time-block">
+                <span class="time-label">09:45–10:45</span><br>
+                <strong>Keynote 1: Prof. Fumiya Iida</strong>
+              </div>
+              <div class="time-block">
+                <span class="time-label break">10:45–11:15</span><br>
+                Coffee Break
+              </div>
+              <div class="time-block">
+                <span class="time-label">11:15–12:15</span><br>
+                <a href="#S1" class="scroll-link">S1: Modular Robots and Programmable Matter</a>
+              </div>
+            </td>
+            
+            <!-- Day 3 AM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
+              <div class="time-block">
+                <span class="time-label">09:30–10:30</span><br>
+                <strong>Keynote 2: Prof. Xavier Defago</strong>
+              </div>
+              <div class="time-block">
+                <span class="time-label break">10:30–11:00</span><br>
+                Coffee Break
+              </div>
+              <div class="time-block">
+                <span class="time-label">11:00–12:15</span><br>
+                <a href="#S4" class="scroll-link">S4: Multi-Robot Task Allocation and Coordination</a>
+              </div>
+            </td>
+            
+            <!-- Day 4 AM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
+              <div class="time-block">
+                <span class="time-label">09:30–10:00</span><br>
+                <strong>Perspective Talk 1</strong>
+              </div>
+              <div class="time-block">
+                <span class="time-label break">10:00–10:30</span><br>
+                Coffee Break
+              </div>
+              <div class="time-block">
+                <span class="time-label">10:30–12:15</span><br>
+                <a href="#S6" class="scroll-link">S6: Multi-Agent Planning, Learning and Exploration</a>
+              </div>
+            </td>
+          </tr>
+          
+          <!-- Lunch -->
+          <tr style="background-color: #e2e8f0;">
+            <td style="padding: 6px 10px; border: 1px solid #cbd5e1; font-weight: bold; text-align: center; color: #334155;">Lunch</td>
+            <td style="padding: 6px 10px; border: 1px solid #cbd5e1; text-align: center; color: #64748b;">—</td>
+            <td style="padding: 6px 10px; border: 1px solid #cbd5e1; text-align: center; color: #475569;">12:15–13:15</td>
+            <td style="padding: 6px 10px; border: 1px solid #cbd5e1; text-align: center; color: #475569;">12:15–13:15</td>
+            <td style="padding: 6px 10px; border: 1px solid #cbd5e1; text-align: center; color: #475569;">12:15–13:15</td>
+          </tr>
+
+          <!-- PM -->
+          <tr>
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; background-color: #f8fafc; font-weight: bold; text-align: center;">PM</td>
+            
+            <!-- Day 1 PM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: middle; text-align: center;">
+              <div class="time-block" style="border: none; margin: 0; padding: 0;">
+                <span class="time-label break" style="display: block; margin-bottom: 4px;">13:00–18:00</span>
+                Registration<br>Open
+              </div>
+            </td>
+            
+            <!-- Day 2 PM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
+              <div class="time-block">
+                <span class="time-label">13:15–14:30</span><br>
+                <a href="#S2" class="scroll-link">S2: Multi-UAV Systems and Search &amp; Rescue</a>
+              </div>
+              <div class="time-block">
+                <span class="time-label">14:30–14:45</span><br>
+                Lightning Talk 1
+              </div>
+              <div class="time-block">
+                <span class="time-label">14:45–16:00</span><br>
+                <a href="#LB1" class="scroll-link lb-link">LB1: Multi-Robot Coordination and Swarm Intelligence (Poster)</a> <span style="font-weight: normal; color: #1e293b;">&amp; Coffee Break</span>
+              </div>
+              <div class="time-block">
+                <span class="time-label">16:00–17:30</span><br>
+                <a href="#S3" class="scroll-link">S3: Swarm Intelligence and Bio-Inspired Systems</a>
+              </div>
+            </td>
+            
+            <!-- Day 3 PM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
+              <div class="time-block">
+                <span class="time-label">13:15–14:30</span><br>
+                <a href="#S5" class="scroll-link">S5: Award Nominees</a>
+              </div>
+              <div class="time-block">
+                <span class="time-label">14:30–14:45</span><br>
+                Lightning Talk 2
+              </div>
+              <div class="time-block">
+                <span class="time-label">14:45–16:00</span><br>
+                <a href="#LB2" class="scroll-link lb-link">LB2: Modular, Reconfigurable, and Distributed Robotic Systems (Poster)</a> <span style="font-weight: normal; color: #1e293b;">&amp; Coffee Break</span>
+              </div>
+              <div class="time-block">
+                <span class="time-label">16:00–17:30</span><br>
+                <strong>Labo-tour</strong>
+              </div>
+            </td>
+            
+            <!-- Day 4 PM -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.4;">
+              <div class="time-block">
+                <span class="time-label">13:15–13:45</span><br>
+                <strong>Perspective Talk 2</strong>
+              </div>
+              <div class="time-block">
+                <span class="time-label">13:45–15:00</span><br>
+                <a href="#S7" class="scroll-link">S7: Swarm Perception and Situation Awareness</a>
+              </div>
+              <div class="time-block">
+                <span class="time-label break">15:00–15:30</span><br>
+                Coffee Break
+              </div>
+              <div class="time-block">
+                <span class="time-label">15:30–16:45</span><br>
+                <a href="#S8" class="scroll-link">S8: Swarm Systems and Applications</a>
+              </div>
+              <div class="time-block">
+                <span class="time-label">16:45–17:15</span><br>
+                <strong>Award Ceremony &amp; Closing</strong>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Evening -->
+          <tr style="background-color: #fff7ed;">
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; font-weight: bold; text-align: center; color: #c2410c;">Evening</td>
+            <!-- Welcome Reception -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: middle; text-align: center; line-height: 1.35;">
+              <div class="time-block" style="border: none; margin: 0; padding: 0;">
+                <span class="time-label" style="background: #ffedd5; color: #9a3412; display: block; margin-bottom: 4px;">18:00–</span>
+                <strong style="color: #c2410c;">Welcome<br>Reception</strong><br>
+                <span style="font-size: 0.8rem; color: #ea580c; display: inline-block; margin-top: 2px;">
+                  @ Tsubame<br>Terrace
+                </span>
+              </div>
+            </td>
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
+            <!-- Banquet -->
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; vertical-align: top; line-height: 1.35;">
+              <div class="time-block">
+                <span class="time-label" style="background: #ffedd5; color: #9a3412;">19:00–21:00</span><br>
+                <strong style="color: #c2410c;">Banquet</strong><br>
+                <span style="font-size: 0.88rem; color: #ea580c; display: inline-block; margin-top: 2px;">
+                  @ Tokyo Prince Hotel
+                </span>
+              </div>
+            </td>
+            <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: center; color: #94a3b8;">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- 注記ボックス (スカイブルー系) -->
+    <div style="margin-top: 0.75rem; margin-bottom: 2rem; line-height: 1.5; background: #f0f9ff; border: 1px solid #bae6fd; padding: 0.85rem 1rem; border-radius: 6px;">
+      <p style="font-size: 0.9rem; color: #0369a1; margin: 0 0 0.3rem 0;">
+        * All presentation sessions and the award ceremony will be held at <strong>Kuramae Hall, Science Tokyo Front</strong> (excluding social events and the Labo-tour).
+      </p>
+      <p style="font-size: 0.9rem; color: #0369a1; font-weight: 600; margin: 0;">
+        * Please refer to the <a href="venue.html" style="color: #0284c7; text-decoration: underline; font-weight: bold;">Venue page</a> for detailed maps and access information for each location.
+      </p>
+    </div>
+
+    <!-- =====================================
+         Detailed Schedule (時系列順)
+    ====================================== -->
+    <h2 class="program-section-title">Detailed Schedule</h2>
+    
+    <div>
+      <!-- DAY 2: Oct 27 (Tue) -->
+      <div class="session-card" id="S1">
+        <h3 class="session-title"><span class="session-id">S1</span>Modular Robots and Programmable Matter</h3>
+        <span class="session-time-badge">Oct 27 (Tue) | 11:15 – 12:15</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Linear-time Heterogeneous Permutation of Sliding-only Cubic Modular Robots in Environments with Obstacles</span>
+            <span class="paper-meta">Hiroshi Kawano</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">A Hybrid Strategy for Robust Navigation in a Self-Reconfigurable Modular Robot</span>
+            <span class="paper-meta">Gilles Abdel Ahad, Nancy Awad, Justin Werfel and Benoit Piranda</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Multi-Line Locomotion in Programmable Matter via Distributed Pivot Reservation</span>
+            <span class="paper-meta">Joseph Gemayel, Jad Bassil, Charbel El Gemayel, Jacques Bou Abdo, Abdallah Makhoul and Jacques Demerjian</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">A Formal Framework for Meta-Module Design in Modular Robot-Based Programmable Matter</span>
+            <span class="paper-meta">Mathis Lamiroy, Jad Bassil and Benoît Piranda</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card" id="S2">
+        <h3 class="session-title"><span class="session-id">S2</span>Multi-UAV Systems and Search &amp; Rescue</h3>
+        <span class="session-time-badge">Oct 27 (Tue) | 13:15 – 14:30</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Cooperative Risk Map Generation for Harbor Areas Using Multi-Drone Systems</span>
+            <span class="paper-meta">Minato Miyashita, Satoshi Otsuki, Ken-ichi Nakashima, and Takeshi Hatanaka</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Noise-Aware Planning and Controlled Whitening in Multi-Drone Sound Source Tracking</span>
+            <span class="paper-meta">Tomohiro Miyoshi, Benjamin Yen, Takeshi Ashizawa, Masahiro Naito, Mikihisa Nakano and Kazuhiro Nakadai</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Search and Rescue for Moving Targets Using Dynamic Belief Maps and Sparsely Connected Swarms</span>
+            <span class="paper-meta">Nicolas Beaudoin, Mathieu La Brie and Amaury Triomphe</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Terrain-Aware Thompson Sampling for Multi-Drone Search and Rescue</span>
+            <span class="paper-meta">Riana Gagnon Souleiman and Giovanni Beltrame</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Seeing Better Together: Perception-Driven Hemispherical Coverage for Multi-UAV Teams</span>
+            <span class="paper-meta">Mehdi Belal, Tiziano Manoni, Dario Albani and Lorenzo Sabattini</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card lb-card" id="LB1">
+        <h3 class="session-title"><span class="session-id">LB1</span>Multi-Robot Coordination and Swarm Intelligence<span class="session-subtitle">(Late-Breaking Results &amp; Demo Session)</span></h3>
+        <span class="session-time-badge">Oct 27 (Tue) | 14:45 – 16:00 (Posters)</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Communication-Free Multi-Robot Task Allocation Using PHD-Based Density Estimation</span>
+            <span class="paper-meta">Takumi Ito and Akiya Kamimura</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Facultative Swarming: Unifying Multi-Robot Control</span>
+            <span class="paper-meta">Ning Zhou and Edmund R. Hunt</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Interactive Wildfire Suppression with Decentralized Brushbot Swarms</span>
+            <span class="paper-meta">Longchen Niu and Gennaro Notomista</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Adaptive undulatory locomotion via decentralized control based on local shear force sensing</span>
+            <span class="paper-meta">Ryu Sato, Kotaro Yasui, and Akio Ishiguro</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Reconstructing Self-Organized Phase Relations in Robotic Systems with Winfree-Type Synchronization Control</span>
+            <span class="paper-meta">Kohei Nishikawa and Daisuke Kurabayashi</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">A Human-Adaptive TAMP Approach applied to MRS in a Manufacturing Scenario</span>
+            <span class="paper-meta">Alberto Gottardi and Enrico Pagello</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Bringing Hierarchical Coverage Scheduling to Reality: Flight Experiments on Robot Zoo Sky</span>
+            <span class="paper-meta">Soksereymongkoul Chhuon, Daisuke Hijikata, and Takeshi Hatanaka</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card" id="S3">
+        <h3 class="session-title"><span class="session-id">S3</span>Swarm Intelligence and Bio-Inspired Systems</h3>
+        <span class="session-time-badge">Oct 27 (Tue) | 16:00 – 17:30</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Adaptive Repulsive Pheromone Clustering for Foraging Robot Swarms</span>
+            <span class="paper-meta">Carlos Pena-Caballero and Qi Lu</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">From Active Search to Persistent Monitoring: A Blended Ergodic-Voronoi Control Strategy</span>
+            <span class="paper-meta">Marta Gabbi, Mattia Catellani, Mattia Mantovani and Lorenzo Sabattini</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Mechanisms of Rotational and Circular Collective Dynamics in Tubificine Worm Blobs</span>
+            <span class="paper-meta">Katsuya Mori, Daiki Wakita, Shun Yoshida, Ryo Kobayashi, Akio Ishiguro and Takeshi Kano</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">A Swarm Approach to Public Transit Using On-demand Routing in a Slime-Mold-Inspired Framework</span>
+            <span class="paper-meta">Lindsay Burke, Maxfield Comstock, Jason Graham, Ruth Malenda, Simon Garnier and Petras Swissler</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Beacon-Driven Control of Robotic Swarmalators</span>
+            <span class="paper-meta">Daniel Liu and Steven Ceron</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Collective Ranking of Environmental Signals by a Patrolling Robot Swarm</span>
+            <span class="paper-meta">Zachary Madin, Connor York, Jonathan Lawry and Edmund Hunt</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DAY 3: Oct 28 (Wed) -->
+      <div class="session-card" id="S4">
+        <h3 class="session-title"><span class="session-id">S4</span>Multi-Robot Task Allocation and Coordination</h3>
+        <span class="session-time-badge">Oct 28 (Wed) | 11:00 – 12:15</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Attention-Based Reinforcement Learning for Energy-Constrained Multi-Robot Task Allocation</span>
+            <span class="paper-meta">Hakmo Son, Haggi Do, Hoon Jung and Jinwhan Kim</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Relay-Based Coordination for Energy-Efficient Multi-Robot Pickup and Delivery</span>
+            <span class="paper-meta">Alkesh Kumar Srivastava, Jared Michael Levin and Philip Dames</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Planner-Guided Reinforcement Learning for Heterogeneous Multi-Robot Task Allocation with Limited Communication</span>
+            <span class="paper-meta">Fengyun Shao, Michael Dubé and Sanaz Mostaghim</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Grouping Auction-Consensus Algorithm for Decentralized Task Allocation in Multi-Robot Systems</span>
+            <span class="paper-meta">Jose Rodriguez, Sven Koenig, Wenjie Dong and Qi Lu</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Preemptive Multiple Robot Coalition Reformation</span>
+            <span class="paper-meta">Neha G. Pusalkar and Julie A. Adams</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card" id="S5">
+        <h3 class="session-title"><span class="session-id">S5</span>Award Nominees</h3>
+        <span class="session-time-badge">Oct 28 (Wed) | 13:15 – 14:30</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">MACH3: Multi-Agent Cooperative Hierarchical Reinforcement Learning via a Three-Layer Architecture</span>
+            <span class="paper-meta">Alessandro Bonetti, Xin Zhou, Yifeng Zhang, Silvia Proia, Tanishq Duhan, Tingguang Zhou, Lorenzo Sabattini and Guillaume Sartoret</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Heterogeneous Sensor-Based Multi-Robot Exploration for Radiation Source Localization in Unknown Environments</span>
+            <span class="paper-meta">Akinori Watanabe, Yusuke Tamura and Yasuhisa Hirata</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Experimental Evaluation of Decentralized Hemispherical Coverage for Multi-UAV Systems</span>
+            <span class="paper-meta">Mehdi Belal, Tiziano Manoni, Dario Albani and Lorenzo Sabattini</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Safe and Energy-Aware Decentralized PDE-Constrained Optimization-Based Control of Multi-UAVs for Persistent Wildfire Suppression</span>
+            <span class="paper-meta">Longchen Niu and Gennaro Notomista</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Probabilistic Multi-Robot Gas Source Localization with Uncalibrated Sensors: A Distributed Estimation Approach</span>
+            <span class="paper-meta">Wanting Jin, Marc Zoel Arias Mitjà and Alcherio Martinoli</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card lb-card" id="LB2">
+        <h3 class="session-title"><span class="session-id">LB2</span>Modular, Reconfigurable, and Distributed Robotic Systems<span class="session-subtitle">(Late-Breaking Results &amp; Demo Session)</span></h3>
+        <span class="session-time-badge">Oct 28 (Wed) | 14:45 – 16:00 (Posters)</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Tapestry: An Operating System for Physically Reconfigurable Matter</span>
+            <span class="paper-meta">James V. Steele</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Kastor: A Self-Assembling Robotic Conveyor System for Construction Site Waste Removal</span>
+            <span class="paper-meta">Mohammadali Rashidioun, Roberto Torres, Myungjin Jung, Mohammad Katibeh, and Petras Swissler</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Soft Mobile Robot with Contact Memory Enabled by Fluidic Sheet Transistor-Based Logic Circuits</span>
+            <span class="paper-meta">Yuki Origane</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Inward-Wave Self-Assembly of Magnetic Modular Cubes with Verified Per-Round Grounding</span>
+            <span class="paper-meta">Ben Lishman</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Robust Adaptive Pathfinding for Interconnected Devices</span>
+            <span class="paper-meta">Maxfield R. Comstock, Jason M. Graham, Petras Swissler, and Simon Garnier</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Topological Divide-and-Conquer for Gas Source Localization in Cluttered Indoor Environments</span>
+            <span class="paper-meta">Huu Quoc Dong Tran, Hayato Dan, and Daisuke Kurabayashi</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Reduction of Gain-Crossover Frequency Spread for Ultra-Large Satellite Constellation Formations through H∞ Control and Graph Optimization</span>
+            <span class="paper-meta">Eiichiro Nishimiya, Hayato Dan, Riku Funada, Zhiyuan Lu, Takeshi Hatanaka, Atsushi Noda, and Sumio Morioka</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DAY 4: Oct 29 (Thu) -->
+      <div class="session-card" id="S6">
+        <h3 class="session-title"><span class="session-id">S6</span>Multi-Agent Planning, Learning and Exploration</h3>
+        <span class="session-time-badge">Oct 29 (Thu) | 10:30 – 12:15</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">A Randomized Bug Algorithm for Swarm Navigation in Dense Obstacle Fields</span>
+            <span class="paper-meta">Parker Gutierrez and Alexandra Nilles</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Huddle: Parallel Shape Assembly using Decentralized, Minimalistic Robots</span>
+            <span class="paper-meta">Khai Yi Chin, Tingwei Meng, Zhe Chen, Daniel Bassett and Yuri Ivanov</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Diffusion-model-based Coordination of Multi-agent Systems</span>
+            <span class="paper-meta">Aki Matsutaka, Shun-Ichi Azuma and Ikumi Banno</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">A Unified Factor-Based Cost Function Formulation for Multi-Agent Path Planning</span>
+            <span class="paper-meta">Marianna Turrà, Silvia Proia, Alessandro Bonetti and Lorenzo Sabattini</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">To Explore or Not to Explore: A Dual-Role Strategy for Cooperative Multi-Robot Systems</span>
+            <span class="paper-meta">Facundo Benavides</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Planner-Conditioned Diffusion for Coordinated Multi-Agent Exploration</span>
+            <span class="paper-meta">Marcus Yu Siong Teo, Jeric Lew, Tanishq Duhan and Guillaume Sartoretti</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Resilient Ergodic Control for Multi-Robot Systems under False Data Injection Attacks</span>
+            <span class="paper-meta">Mohammad Tahmasbi and Azwirman Gusrialdi</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card" id="S7">
+        <h3 class="session-title"><span class="session-id">S7</span>Swarm Perception and Situation Awareness</h3>
+        <span class="session-time-badge">Oct 29 (Thu) | 13:45 – 15:00</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Enabling Motion-Induced WiFi-CSI Sensing in Multi-Robot Systems: A Simulation Framework</span>
+            <span class="paper-meta">Brendan Dijkstra, Ninad Jadhav, Maurice Stoffijn, Stephanie Gil and Bahar Haghighat</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Lightweight Change Detection for Adaptive Collective Perception in Dynamic Environments</span>
+            <span class="paper-meta">Thiemen Siemensma, Tiago Travassos, Jiacheng Zhang and Bahar Haghighat</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Environmental Perception in a Swarm of Conversational Agents</span>
+            <span class="paper-meta">Absera Yihunie, Boubacar Ballo, Lilly Schwarzenbach, Hanan Salam and Eliseo Ferrante</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Distributed Swarm Formation Recognition via Local Features and Gossip-Averaged Graph Neural Networks</span>
+            <span class="paper-meta">Samuel Badalov and Michael Otte</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">SWIRL: Swarm Worker Intent Recognition and Localization</span>
+            <span class="paper-meta">Surya Prabhakaran, Michael Dubé, Christoph Steup and Sanaz Mostaghim</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="session-card" id="S8">
+        <h3 class="session-title"><span class="session-id">S8</span>Swarm Systems and Applications</h3>
+        <span class="session-time-badge">Oct 29 (Thu) | 15:30 – 16:45</span>
+        <ul class="paper-list">
+          <li class="paper-item">
+            <span class="paper-title">Modeling Analysis of Inter-Robot Climbing Locomotion Inspired by Caterpillar Swarms</span>
+            <span class="paper-meta">Shura Suzuki, Yuki Origane and Akio Ishiguro</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Optimal Performance of Cooperative Energy-Replenishment in Robot Swarms</span>
+            <span class="paper-meta">Julian Rau, Mohamed S. Talamali, Genki Miyauchi, Usama Ali, Mengyao Liu, Danny Hughes, Thomas Watteyne and Roderich Gross</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">Deploying Mobile Ad Hoc Networks for Coverage of Planar Worlds with Distributed Consensus</span>
+            <span class="paper-meta">Edwin Meriaux, Shuo Wen, Louis-Roy Langevin, Antonio Loria and Gregory Dudek</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">VILAS: A VLA-Integrated Low-cost Architecture with Soft Grasping for Robotic Manipulation</span>
+            <span class="paper-meta">Zijian An, Hadi Khezam, Bill Cai, Ran Yang, Shijie Geng, Yiming Feng, Yue Zheng and Lifeng Zhou</span>
+          </li>
+          <li class="paper-item">
+            <span class="paper-title">LLM-Foraging: Large Language Models for Decentralized Swarm Robot Foraging</span>
+            <span class="paper-meta">Peihan Li, Joanna Gutierrez, Fabian Hernandez, Qi Lu and Lifeng Zhou</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
 </section>
 </main>
+
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 DARS – Distributed Autonomous Robotic Systems.</p>
@@ -143,6 +707,7 @@
     <p><a href="#main-content">Back to top</a></p>
   </div>
 </footer>
+
 <script src="assets/js/main.js"></script>
 </body>
 </html>
