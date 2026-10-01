@@ -5,44 +5,298 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DARS 2026 – Awards</title>
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Match the visual style used in program.html */
+    .award-section-title {
+      font-size: 1.4rem;
+      color: #0f172a;
+      border-bottom: 2px solid #1e40af;
+      padding-bottom: 0.2rem;
+      margin: 2rem 0 0.85rem 0;
+      font-weight: 700;
+    }
+
+    .award-intro {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #475569;
+      margin-bottom: 1.5rem;
+    }
+
+    .award-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #2563eb;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .award-card-title {
+      margin-top: 0;
+      color: #0f172a;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.25;
+    }
+
+    .paper-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 0.5rem;
+    }
+
+    .paper-item {
+      margin-bottom: 0.65rem;
+      padding-left: 0.8rem;
+      position: relative;
+    }
+
+    .paper-item::before {
+      content: "•";
+      color: #94a3b8;
+      position: absolute;
+      left: 0;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .paper-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .paper-title {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.92rem;
+      display: block;
+      line-height: 1.25;
+      margin-bottom: 0;
+    }
+
+    .paper-meta {
+      color: #475569;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+
+    .info-box {
+      margin-top: 0.75rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+    }
+
+    .info-box p {
+      font-size: 0.9rem;
+      color: #0369a1;
+      margin: 0;
+    }
+
+    .info-box a {
+      color: #0284c7;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    .travel-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #2563eb;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .travel-card p {
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+  </style>
 </head>
+
 <body>
+
 <header class="site-header">
   <div class="container header-inner">
+
     <a class="brand" href="index.html">DARS2026</a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      <span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span>
+
+    <button
+      class="menu-toggle"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Open menu"
+    >
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
     </button>
+
     <nav id="site-nav" class="site-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="cfp.html">CFP</a></li>
         <li><a href="program.html">Program</a></li>
         <li><a href="keynotes.html">Speakers</a></li>
-        <li><a href="awards.html">Awards</a></li>
+        <li><a href="awards.html" class="active">Awards</a></li>
         <li><a href="venue.html">Venue</a></li>
         <li><a href="registration.html">Registration</a></li>
-        <li><a href="sponsor.html">Sponsorship & Exhibition</a></li>
+        <li><a href="sponsor.html">Sponsorship &amp; Exhibition</a></li>
         <li><a href="organizers.html">Organizers</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
+
+
 <main id="main-content" class="site-main">
-<section class="section">
-  <div class="container">
-    <h1>Awards</h1>
-    <p>TBD</p>
-  </div>
-</section>
+
+  <section class="section" style="padding: 2rem 0;">
+
+    <div class="container">
+
+      <h1>Awards</h1>
+
+      <p class="award-intro">
+        DARS 2026 will present Paper Awards for outstanding papers and a Student Travel Award to support student participation.
+      </p>
+
+
+      <!-- =====================================
+           Paper Award Nominees
+           ====================================== -->
+
+      <h2 class="award-section-title">
+        Paper Award Nominees
+      </h2>
+
+      <p class="award-intro" style="margin-bottom: 1rem;">
+        The following papers have been selected as nominees for the DARS 2026 Paper Awards.
+      </p>
+
+      <div class="award-card">
+
+        <h3 class="award-card-title">
+          Nominees
+        </h3>
+
+        <ul class="paper-list">
+
+          <li class="paper-item">
+            <span class="paper-title">
+              MACH3: Multi-Agent Cooperative Hierarchical Reinforcement Learning via a Three-Layer Architecture
+            </span>
+            <span class="paper-meta">
+              Alessandro Bonetti, Xin Zhou, Yifeng Zhang, Silvia Proia, Tanishq Duhan, Tingguang Zhou, Lorenzo Sabattini and Guillaume Sartoretti
+            </span>
+          </li>
+
+          <li class="paper-item">
+            <span class="paper-title">
+              Heterogeneous Sensor-Based Multi-Robot Exploration for Radiation Source Localization in Unknown Environments
+            </span>
+            <span class="paper-meta">
+              Akinori Watanabe, Yusuke Tamura and Yasuhisa Hirata
+            </span>
+          </li>
+
+          <li class="paper-item">
+            <span class="paper-title">
+              Experimental Evaluation of Decentralized Hemispherical Coverage for Multi-UAV Systems
+            </span>
+            <span class="paper-meta">
+              Mehdi Belal, Tiziano Manoni, Dario Albani and Lorenzo Sabattini
+            </span>
+          </li>
+
+          <li class="paper-item">
+            <span class="paper-title">
+              Safe and Energy-Aware Decentralized PDE-Constrained Optimization-Based Control of Multi-UAVs for Persistent Wildfire Suppression
+            </span>
+            <span class="paper-meta">
+              Longchen Niu and Gennaro Notomista
+            </span>
+          </li>
+
+          <li class="paper-item">
+            <span class="paper-title">
+              Probabilistic Multi-Robot Gas Source Localization with Uncalibrated Sensors: A Distributed Estimation Approach
+            </span>
+            <span class="paper-meta">
+              Wanting Jin, Marc Zoel Arias Mitjà and Alcherio Martinoli
+            </span>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="info-box">
+        <p>
+          <strong>Selection process:</strong>
+          The final Paper Award recipients will be determined by the Award Committee based on both the submitted papers and the presentations delivered in
+          <a href="program.html#S5">S5: Award Nominees</a>.
+        </p>
+      </div>
+
+
+      <!-- =====================================
+           Student Travel Award
+           ====================================== -->
+
+      <h2 class="award-section-title">
+        Student Travel Award
+      </h2>
+
+      <div class="travel-card">
+
+        <p>The Student Travel Award is <strong style="color: #c2410c;">currently under review</strong>. Priority is given to students presenting papers at DARS 2026. Selected recipients are expected to receive partial reimbursement of their conference registration fee. Further information will be announced once the review process has been completed.
+</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </main>
+
+
 <footer class="site-footer">
+
   <div class="container">
-    <p>© 2026 DARS – Distributed Autonomous Robotic Systems.</p>
-    <p>Contact: <span id="contact-email"></span></p>
-    <p><a href="#main-content">Back to top</a></p>
+
+    <p>
+      © 2026 DARS – Distributed Autonomous Robotic Systems.
+    </p>
+
+    <p>
+      Contact: <span id="contact-email"></span>
+    </p>
+
+    <p>
+      <a href="#main-content">Back to top</a>
+    </p>
+
   </div>
+
 </footer>
+
+
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
