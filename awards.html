@@ -122,6 +122,48 @@
       line-height: 1.5;
       margin: 0;
     }
+
+    .recipient-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 0.5rem;
+    }
+
+    .recipient-item {
+      margin-bottom: 0.65rem;
+      padding-left: 0.8rem;
+      position: relative;
+    }
+
+    .recipient-item::before {
+      content: "•";
+      color: #94a3b8;
+      position: absolute;
+      left: 0;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .recipient-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .recipient-name {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.92rem;
+      display: block;
+      line-height: 1.25;
+      margin-bottom: 0;
+    }
+
+    .recipient-affiliation {
+      color: #475569;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
   </style>
 </head>
 
@@ -252,23 +294,107 @@
         </p>
       </div>
 
+<!-- =====================================
+     Student Travel Award
+     ====================================== -->
 
-      <!-- =====================================
-           Student Travel Award
-           ====================================== -->
+<h2 class="award-section-title">
+  Student Travel Award
+</h2>
 
-      <h2 class="award-section-title">
-        Student Travel Award
-      </h2>
-
-      <div class="travel-card">
-
-        <p>The Student Travel Award is <strong style="color: #c2410c;">currently under review</strong>. Priority is given to students presenting papers at DARS 2026. Selected recipients are expected to receive partial reimbursement of their conference registration fee. Further information will be announced once the review process has been completed.
+<p class="award-intro" style="margin-bottom: 1rem;">
+  The following students have been selected as recipients of the DARS 2026 Student Travel Award.
 </p>
 
-      </div>
+<div class="travel-card">
 
-    </div>
+  <h3 class="award-card-title">
+    Award Recipients
+  </h3>
+
+  <ul class="recipient-list">
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Brendan Dijkstra
+      </span>
+      <span class="recipient-affiliation">
+        University of Groningen, Netherlands
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Marta Gabbi
+      </span>
+      <span class="recipient-affiliation">
+        University of Modena and Reggio Emilia, Italy
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Wanting Jin
+      </span>
+      <span class="recipient-affiliation">
+        EPFL, Switzerland
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Edwin Meriaux
+      </span>
+      <span class="recipient-affiliation">
+        CentraleSupélec / McGill University, France
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Mason (Longchen) Niu
+      </span>
+      <span class="recipient-affiliation">
+        University of Waterloo, Canada
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Carlos Andres Pena Caballero
+      </span>
+      <span class="recipient-affiliation">
+        University of Texas Rio Grande Valley, United States
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Riana Annie Gagnon Souleiman
+      </span>
+      <span class="recipient-affiliation">
+        Polytechnique Montréal, Canada
+      </span>
+    </li>
+
+    <li class="recipient-item">
+      <span class="recipient-name">
+        Alkesh Kumar Srivastava
+      </span>
+      <span class="recipient-affiliation">
+        Temple University, United States
+      </span>
+    </li>
+
+  </ul>
+
+</div>
+
+<div class="info-box">
+  <p>
+    Student Travel Award recipients will receive partial reimbursement of their conference registration fee.
+  </p>
+</div>
 
   </section>
 
